@@ -74,6 +74,16 @@ export default class Content extends Component {
     ]
     changeGlass = (i) => {
         document.querySelector('.glassInfo').style.display = 'block';
+        var spinner = document.getElementById('Info');
+        var spinnerAnimation = spinner.animate([
+            { opacity: 0 },
+            { opacity: 1 }
+        ], {
+            duration: 500,
+        });
+        spinnerAnimation.play();
+
+        // document.querySelector('.glassInfo').style.animation.play();
         i -= 1;
         var newurl = '../img/' + this.ArrGlass[i].url;
         this.setState({
@@ -98,10 +108,10 @@ export default class Content extends Component {
                 <div className="container pb-3">
                     <div className="pictureModal" >
                         <div className="row p-5">
-                            <div className="col-6 d-flex align-items-center justify-content-center ">
+                            <div className="col-sm-6 col-12 d-flex align-items-center justify-content-center ">
                                 <div className="imgModel">
                                     <img src="../img/glassesImage/model.jpg" alt="" width={'250px'} />
-                                    <img className='glassDemo' src={this.state.url} alt="" width={'55%'} />
+                                    <img className='glassDemo' src={this.state.url} alt="" width={'55%'} style={{ opacity: 0.85 }} />
                                     <div id='Info' className="glassInfo p-2">
                                         <h6>{this.state.name}</h6>
                                         <div>Price: <b>{this.state.price}$</b></div>
@@ -109,7 +119,7 @@ export default class Content extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-6 d-flex align-items-center justify-content-center ">
+                            <div className="col-sm-6 col-12 d-flex align-items-center justify-content-center ">
                                 <div className="imgModel">
                                     <img src="../img/glassesImage/model.jpg" alt="" width={'250px'} />
                                 </div>
@@ -122,13 +132,13 @@ export default class Content extends Component {
                             {this.renderBtn()}
                         </div>
                         <div className="">
-                                <button className='btn btn-warning px-5' onClick={() => {
-                                    document.querySelector('.glassInfo').style.display = 'none';
-                                    this.setState({
-                                        url: '',
-                                    })
-                                }}> Reset</button>
-                            </div>
+                            <button className='btn btn-warning px-5' onClick={() => {
+                                document.querySelector('.glassInfo').style.display = 'none';
+                                this.setState({
+                                    url: '',
+                                })
+                            }}> Reset</button>
+                        </div>
                     </div>
                 </div>
             </div>
