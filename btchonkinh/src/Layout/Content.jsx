@@ -95,9 +95,9 @@ export default class Content extends Component {
     render() {
         return (
             <div className="w-100 h-100" style={{ backgroundColor: 'rgba(0,0,0,.3)' }}>
-                <div className="container">
+                <div className="container pb-3">
                     <div className="pictureModal" >
-                        <div className="row p-3">
+                        <div className="row p-5">
                             <div className="col-6 d-flex align-items-center justify-content-center ">
                                 <div className="imgModel">
                                     <img src="../img/glassesImage/model.jpg" alt="" width={'250px'} />
