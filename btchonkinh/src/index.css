@@ -39,7 +39,8 @@ code {
   position: absolute;
   bottom: 0px;
   background-color: rgba(255, 99, 71,0.3);
-  animation: showGlassInfo 1s;
+  animation: showGlassInfo .5s;
+  transition: all 0.3s ease;
 }
 
 @keyframes showGlassInfo {

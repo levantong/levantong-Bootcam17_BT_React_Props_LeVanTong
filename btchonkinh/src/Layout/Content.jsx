@@ -120,15 +120,15 @@ export default class Content extends Component {
                         <h4>Please click the button below to see the glasses displayed on the face:</h4>
                         <div className="row">
                             {this.renderBtn()}
-                            <div className="col-3 p-3 col-md-2 col-sm-4 glassesCover">
-                                <button className='btn btn-warning' onClick={() => {
+                        </div>
+                        <div className="">
+                                <button className='btn btn-warning px-5' onClick={() => {
                                     document.querySelector('.glassInfo').style.display = 'none';
                                     this.setState({
                                         url: '',
                                     })
                                 }}> Reset</button>
                             </div>
-                        </div>
                     </div>
                 </div>
             </div>
