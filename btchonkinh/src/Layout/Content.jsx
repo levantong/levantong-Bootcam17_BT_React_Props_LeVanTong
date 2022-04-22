@@ -82,8 +82,6 @@ export default class Content extends Component {
             duration: 500,
         });
         spinnerAnimation.play();
-
-        // document.querySelector('.glassInfo').style.animation.play();
         i -= 1;
         var newurl = '../img/' + this.ArrGlass[i].url;
         this.setState({
