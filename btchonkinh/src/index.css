@@ -5,9 +5,44 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../public/img/glassesImage/background.jpg);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.glassesCover button{
+  border: 1px  solid ;
+}
+.imgModel{
+  position: relative;
+
+  width: 250px;
+}
+/* .imgNguoi img{
+  position: absolute;
+
+} */
+.glassDemo{
+  position: absolute;
+  bottom: 180px;
+  left: 57px;
+  z-index: 10;
+}
+
+.glassInfo{
+  display: none;
+  position: absolute;
+  bottom: 0px;
+  background-color: rgba(255, 99, 71,0.3);
+  animation: showGlassInfo 1s;
+}
+
+@keyframes showGlassInfo {
+  from {opacity: 0}
+  to {opacity: 1}
 }
